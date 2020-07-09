@@ -1,14 +1,21 @@
 .trend {
 	padding: 115px 0 120px;
 	&__title {
-		margin-bottom: 50px;
+		margin-bottom: 45px;
+	}	
+	&__slider {
+		padding-left: 15px;
 	}
 	&__slide {
 		max-width: 440px;
 		margin-right: 35px;
 	}
+	.slick-list {
+		padding: 5px 0;
+		margin: -5px 0;
+	}
 	.slick-dots {
-		padding-top: 60px;
+		padding-top: 55px;
 		display: flex;
 		justify-content: center;
 		align-items: center;	

@@ -62,11 +62,16 @@
 		background: #f5f5f5;
 		position: relative;
 		transition-duration: 0.3s;
-		img {
-			display: block;
-			width: 14px;
-			height: auto;
-			transform: translateX(-1px);
+		position: relative;
+		&::before {
+			content: '\f07a';
+			font-family: 'icomoon';
+			font-size: 16px;
+			color: #a0a0a0;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
 		}
 		&:hover, &:focus {
 			box-shadow: 0 0 10px #aaaaaa;

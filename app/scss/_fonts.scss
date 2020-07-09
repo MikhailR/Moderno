@@ -19,3 +19,52 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?guu00k');
+  src:  url('../fonts/icomoon.eot?guu00k#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?guu00k') format('truetype'),
+    url('../fonts/icomoon.woff?guu00k') format('woff'),
+    url('../fonts/icomoon.svg?guu00k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// .icon-search:before {
+//   content: "\f002";
+// }
+// .icon-map-marker:before {
+//   content: "\f041";
+// }
+// .icon-shopping-cart:before {
+//   content: "\f07a";
+// }
+// .icon-phone:before {
+//   content: "\f095";
+// }
+// .icon-flash:before {
+//   content: "\f0e7";
+// }
+// .icon-angle-right:before {
+//   content: "\f105";
+// }
+// .icon-location-arrow:before {
+//   content: "\f124";
+// }

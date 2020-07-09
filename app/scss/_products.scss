@@ -155,5 +155,16 @@
 		}
 	}
 	&__author-rating {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 110px;
+		color: #b0bec5;
+		span {
+			color: $text-dark;
+		}
 	}	
+	&__author-stars {
+		margin-right: 5px;
+	}
 }

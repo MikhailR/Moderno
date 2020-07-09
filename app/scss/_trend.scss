@@ -1,0 +1,33 @@
+.trend {
+	padding: 115px 0 120px;
+	&__title {
+		margin-bottom: 50px;
+	}
+	&__slide {
+		max-width: 440px;
+		margin-right: 35px;
+	}
+	.slick-dots {
+		padding-top: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;	
+		li {
+			line-height: 0;
+			margin: 0 4px;
+			&.slick-active button {
+				background: $color-green;
+				box-shadow: none;
+			}
+		}
+		button {
+			font-size: 0;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background: #e8e8e8;
+			box-shadow: inset 0 1px 1px #b1b1b1;
+			outline: none;
+		}
+	}
+}

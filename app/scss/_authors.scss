@@ -1,0 +1,40 @@
+.authors {
+	background: #d4d4d4;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 750px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 655px;
+		padding: 65px 60px 80px;
+		background: $color-green;
+	}
+	&__title {
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 1.16;
+		color: #ffffff;
+		padding-right: 10px;
+		max-width: 270px;
+		span {
+			font-weight: 700;
+		}
+	}
+	&__link {
+		display: inline-block;
+		padding: 25px 43px 22px;
+		background: #ffffff;
+		font-size: 18px;
+		color: $text-dark;
+		transition-duration: 0.3s;
+		&:hover, &:focus {
+			box-shadow: 0 0 20px #ffffff;
+		}
+	}
+}

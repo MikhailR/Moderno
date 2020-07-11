@@ -39,8 +39,13 @@ $(function(){
       $('.products-page__catalog').addClass('list');
     } else {
       $('.products-page__catalog').removeClass('list');
-    }
-    
+    }    
+  });
+
+  //увеличение счётчиков количества комментов и лайков
+  $('.item__popularity-icon').on('click', function(){
+    const counter = $(this).next('.item__popularity-count').children('span').text();
+    $(this).next('.item__popularity-count').children('span').text(+counter + 1);
   });
   
 });

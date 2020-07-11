@@ -280,6 +280,7 @@
 	&__display-button {
 		font-size: 16px;
 		color: #90a4ae;
+		outline: none;
 		& + .products-page__display-button {
 			margin-left: 7px;
 		}
@@ -322,6 +323,9 @@
 		&__product-title {
 			font-size: 16px;
 			margin-bottom: 10px;
+		}		
+		&__sales, &__popularity {
+			display: none;
 		}
 		&__author {
 			padding: 15px 22px 18px;
@@ -381,23 +385,77 @@
 			}
 			&__box {
 				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
 			}
 			&__product {
-				padding: 23px 20px;
-			}
-			&__product-info {
-				padding-right: 10px;
+				width: 100%;
+				padding: 23px 32px 20px;
+				flex-wrap: wrap;
 			}
 			&__product-title {
-				font-size: 16px;
-				margin-bottom: 10px;
+				margin-bottom: 7px;
+			}
+			&__product-price {
+				font-size: 30px;
+			}
+			&__sales {
+				width: 100%;
+				margin-top: 17px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			&__sales-text {
+				font-size: 14px;
+				color: #70838d;
+				padding-right: 20px;
+			}
+			&__sales-amount {
+				min-width: 70px;
+				font-size: 13px;
+				color: #aeb4bb;
+			}
+			&__popularity {
+				display: flex;
+				align-items: center;
+				margin-left: 30px;
+				div {
+					position: relative;
+					&::before {
+						content: '';
+						width: 2px;
+						height: 11px;
+						background: #aeb4bb;
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+			}
+			&__popularity-comments {
+				padding-right: 25px;
+			}
+			&__popularity-icon {
+				margin: 0 14px 0 18px;
+				vertical-align: middle;
+				&::before {
+					font-size: 16px;
+					color: $color-green;
+				}				
+			}
+			&__popularity-count {
+				font-weight: 500;
+				font-size: 12px;
+				color: #b0bec5;
+				span {
+					color: $text-dark;
+				}
 			}
 			&__author {
-				padding: 15px 22px 18px;
-			}
-			&__author-photo {
-				width: 30px;
-				height: 30px;
+				width: 100%;
+				padding: 15px 32px 18px;
 			}
 		}
 	}

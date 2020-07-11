@@ -1,6 +1,8 @@
 $(function(){
-	//фильтрация продуктов по категориям
-	var mixer = mixitup('.products__block');
+  //фильтрация продуктов по категориям
+  if ($('.products__block').length) {
+    var mixer = mixitup('.products__block');
+  }
 
 	//звёздный рейтинг
 	$('.item__author-stars').rateYo({
@@ -18,4 +20,27 @@ $(function(){
   	dots: true,
   	arrows: false
   });
+
+  //range-шкала цен на странице каталога товаров
+  $('.js-range-slider').ionRangeSlider({
+    type: 'double',
+    min: 0,
+    max: 1200,
+    from: 0,
+    to: 600,
+    prefix: "$"
+  });
+
+  //переключение отображения товаров в каталоге (плитка или список)
+  $('.products-page__display-button').on('click', function(){
+    $('.products-page__display-button').removeClass('active');
+    $(this).addClass('active');
+    if($(this).hasClass('icon-th-list')) {
+      $('.products-page__catalog').addClass('list');
+    } else {
+      $('.products-page__catalog').removeClass('list');
+    }
+    
+  });
+  
 });

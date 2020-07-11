@@ -2,6 +2,10 @@ html {
 	box-sizing: border-box;
 }
 
+html, body {
+	height: 100%;
+}
+
 *, *::before, *::after {
 	box-sizing: inherit;
 	margin: 0;
@@ -16,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
 	display: inline-block;
 	text-decoration: none;
+	color: inherit;
 }
 
 button {
@@ -39,9 +44,18 @@ body {
 }
 
 .wrapper {
+	min-height: 100%;
 	width: 100%;
 	max-width: 1920px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.content {
+	flex: 1 0 auto;
+	margin-bottom: auto;
 }
 
 .container {
@@ -86,5 +100,37 @@ body {
 		left: 13px;
 		top: 10px;
 		z-index: 5;
+	}
+}
+
+.breadcrumbs {
+	&__inner {
+		padding: 45px 0 38px;
+	}
+	&__item {
+		display: inline-block;
+		position: relative;
+		& + .breadcrumbs__item {
+			margin-left: 20px;
+			&::before {
+				content: '';
+				width: 4px;
+				height: 1px;
+				background: $color-green;
+				position: absolute;
+				left: -14px;
+				top: 50%;
+				z-index: 2;
+			}
+		}
+		&:last-child .breadcrumbs__link {
+			color: $text-dark;
+		}
+	}
+	a.breadcrumbs__link {
+		color: #b0bec5;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
 	}
 }

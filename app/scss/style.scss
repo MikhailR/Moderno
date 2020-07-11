@@ -1,7 +1,9 @@
+//общие глобальные стили
 @import 'vars';
 @import 'fonts';
 @import 'global';
 
+//стили для блоков главной страницы
 @import 'header';
 @import 'search';
 @import 'products';
@@ -10,3 +12,6 @@
 @import 'authors';
 @import 'tutorials';
 @import 'footer';
+
+//стили для страницы "New-Items"
+@import 'new-items';

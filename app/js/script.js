@@ -1,4 +1,21 @@
 $(function(){
+  //клик по бургеру и открытие\закрытие меню
+  $('.header__burger').on('click', function(){
+    $(this).toggleClass('header__burger--active');
+    $('.header__menu').toggleClass('header__menu--active');
+    if($(this).hasClass('header__burger--active')) {     
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    }
+  });
+  //закрытие меню по клику на пункт меню
+  $('.header__menu a').on('click', function(){
+    $('.header__burger').removeClass('header__burger--active');
+    $('.header__menu').removeClass('header__menu--active');
+    $('body').css('overflow', 'auto');
+  });
+
   //фильтрация продуктов по категориям
   if ($('.products__block').length) {
     var mixer = mixitup('.products__block');

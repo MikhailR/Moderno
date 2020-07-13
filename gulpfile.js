@@ -44,12 +44,12 @@ gulp.task('script', function(){
 });
 
 gulp.task('html', function(){
-	return gulp.src('app/*.html')
+	return gulp.src('app/**/*.html')
 					.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('js', function(){
-	return gulp.src('app/js/*.js')
+	return gulp.src('app/js/**/*.js')
 					.pipe(browserSync.reload({stream: true}))
 });
 

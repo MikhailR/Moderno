@@ -162,6 +162,13 @@
 	}
 }
 
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group {
+	z-index: 3!important;
+	svg {
+		z-index: 3!important;
+	}
+}
+
 .products .item__image {
 	&:hover::after, &:focus::after {
 		width: 100%;

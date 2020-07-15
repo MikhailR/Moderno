@@ -64,5 +64,15 @@ $(function(){
     const counter = $(this).next('.item__popularity-count').children('span').text();
     $(this).next('.item__popularity-count').children('span').text(+counter + 1);
   });
+
+  //переключение табов на странице товара (продукта)
+  $('.product__content-trigger').on('click', function(e){
+    e.preventDefault();
+    var id = $(this).attr('data-tab');
+    $('.product__content-trigger').removeClass('product__content-trigger--active');
+    $('.product__content-tab').removeClass('product__content-tab--active');
+    $(this).addClass('product__content-trigger--active');
+    $('#' + id).addClass('product__content-tab--active').fadeIn(300);
+  });
   
 });

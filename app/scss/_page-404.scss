@@ -1,0 +1,63 @@
+.page-404 {
+	margin-bottom: 150px;
+	&__inner {
+		border: 1px solid #dedede;
+	}
+	&__head {
+		background: #ffffff;
+		border-bottom: 1px solid #dedede;
+		padding: 20px 27px;
+		font-weight: 500;
+		font-size: 24px;
+		color: #444444;
+	}
+	&__body {
+		padding: 110px 40px 100px;
+		background: $color-green;
+		text-align: center;
+		color: #ffffff;
+	}
+	&__title {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 300px;
+		line-height: 230px;
+		margin-bottom: 45px;
+		padding-right: 190px;
+		position: relative;
+		&::after {
+			content: '';
+			width: 170px;
+			height: 310px;
+			background: url('../images/page-404-image.png') center / contain no-repeat;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__subtitle {
+		font-size: 30px;
+		letter-spacing: 6px;
+		margin-bottom: 25px;
+	}
+	&__text {
+		max-width: 520px;
+		margin: 0 auto 47px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	&__link {
+		border-radius: 3px;
+		border: 2px solid #ffffff;
+		padding: 18px 30px 17px;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		transition-duration: 0.3s;
+		&:hover, &:focus {
+			background: #ffffff;
+			color: $color-green;
+		}
+	}
+}

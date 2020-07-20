@@ -74,5 +74,21 @@ $(function(){
     $(this).addClass('product__content-trigger--active');
     $('#' + id).addClass('product__content-tab--active').fadeIn(300);
   });
+
+  //открытие\закрытие модального окна
+  $('.header__button--login').on('click', function(){
+    $('#modal').fadeIn(300);
+    $('body').css('overflow', 'hidden');
+  });
+
+  $('#modal-close, #modal-layer').on('click', function(){
+    $('#modal').fadeOut(300);
+    $('body').css('overflow', 'auto');
+  });
+
+  $('#modal-form').on('submit', function(){
+    $('#modal').fadeOut(300);
+    $('body').css('overflow', 'auto');
+  });
   
 });

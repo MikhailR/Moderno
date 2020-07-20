@@ -838,6 +838,25 @@
 		</footer>
 	</div>
 
+	<div class="modal" id="modal">
+		<div class="modal__layer" id="modal-layer"></div>
+		<div class="modal__content">
+			<button class="modal__close icon-close" id="modal-close" type="button"></button>
+			<div class="modal__title">Login</div>
+			<form class="modal__form" id="modal-form">
+				<label class="modal__form-label icon-user">
+					<input class="modal__form-input" type="text" placeholder="Name" required>
+				</label>
+				<label class="modal__form-label icon-lock">
+					<input class="modal__form-input" type="password" placeholder="Password" required>
+				</label>
+				<button class="modal__form-submit">Submit</button>
+				<a class="modal__form-create" href="#"><span class="icon-edit">Creat An Account?<span></a>
+				<a class="modal__form-lost" href="#">Lost Password?</a>
+			</form>			
+		</div>
+	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/script.js"></script>

@@ -90,5 +90,15 @@ $(function(){
     $('#modal').fadeOut(300);
     $('body').css('overflow', 'auto');
   });
+
+  //переключение табов на странице персональных данных пользователя
+  $('.settings__trigger').on('click', function(e){
+    e.preventDefault();
+    var id = $(this).attr('data-tab');
+    $('.settings__trigger').removeClass('settings__trigger--active');
+    $('.settings__tab').removeClass('settings__tab--active');
+    $(this).addClass('settings__trigger--active');
+    $('#' + id).addClass('settings__tab--active').fadeIn(300);
+  });
   
 });

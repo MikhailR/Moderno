@@ -111,4 +111,6 @@ $(function(){
     $('#' + id).addClass('profile__tab--active').fadeIn(300);
   });
   
+  //кастомизация элементов форм
+  $('input[type="file"], select').styler();
 });

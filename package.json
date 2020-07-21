@@ -18,6 +18,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "ion-rangeslider": "^2.3.1",
+    "jquery-form-styler": "^2.0.2",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
     "rateyo": "^3.0.0-alpha.2",

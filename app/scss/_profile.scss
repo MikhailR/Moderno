@@ -1,0 +1,237 @@
+.profile {
+	margin-bottom: 113px;
+	&__top {
+		display: flex;
+		margin-bottom: 30px;
+	}
+	&__aside {
+		flex-shrink: 0;
+		max-width: 270px;
+		margin-right: 30px;		
+	}
+	.product-author__box {
+		margin-bottom: 45px;
+	}
+	.product-author__awards-item::before {
+		top: 3px;
+	}
+	&__aside-socials {
+		margin-bottom: 27px;
+	}
+	&__aside-button {
+		display: block;
+		padding: 18px 0 16px;
+		text-align: center;
+		font-weight: 500;
+		font-size: 16px;
+		color: #ffffff;
+		background: $color-green;
+		border: 2px solid $color-green;
+		transition-duration: 0.3s;
+		box-shadow: 0 1px 2px #455a64;
+		&:hover, &:focus {
+			background: #ffffff;
+			color: $color-green;
+		}
+	}
+	&__aside-button--send {
+		background: $text-light;
+		border: 2px solid $text-light;
+		margin-bottom: 17px;
+		&:hover, &:focus {
+			color: $text-light;
+		}
+	}
+	&__content {
+		flex-grow: 1;
+		max-width: 100%;
+	}
+	&__content-image {
+		display: block;
+		border: 1px solid #dedede;
+		background: #ffffff;
+		padding: 18px 20px 17px;
+		margin-bottom: 30px;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__content-info {
+		border: 1px solid #dedede;
+		background: #ffffff;
+		display: flex;
+	}
+	&__content-item {
+		border-right: 1px solid #dedede;
+		width: 25%;
+		padding: 18px 20px 13px;
+		text-align: center;
+		&:last-child {
+			border-right: none;
+		}
+	}
+	&__content-title {
+		font-weight: 500;
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	&__content-data {
+		font-size: 14px;
+		color: #707070;
+	}
+	.item__author-rating {
+		width: 100%;
+		justify-content: center;
+	}
+	&__bottom {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__triggers {
+		flex-shrink: 0;
+		width: 100%;
+		max-width: 270px;
+		margin-right: 30px;
+		background: #ffffff;
+		border: 1px solid #dedede;
+	}
+	&__trigger {
+		display: block;
+		border-bottom: 1px solid #dedede;
+		padding: 15px 15px 15px 50px;
+		font-weight: 500;
+		font-size: 14px;
+		color: #707070;
+		position: relative;
+		transition-duration: 0.3s;
+		&::before {
+			font-family: 'icomoon';
+			font-size: 14px;
+			color: #d0d0d0;
+			transition-duration: 0.3s;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			transform: translateY(-55%);
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+		&--active {
+			font-weight: 500;
+			color: $text-dark;
+			box-shadow: inset 0 -2px $color-green;
+			&::before {
+				color: $color-green;
+			}
+		}
+	}
+	&__trigger--about::before {
+		content: '\f007';
+	}
+	&__trigger--products::before {
+		content: '\f0b1';
+	}
+	&__trigger--messages::before {
+		content: '\f003';
+	}
+	&__trigger--reviews::before {
+		content: '\f0e6';
+	}
+	&__trigger--followers::before {
+		content: '\f0c0';
+	}
+	&__tabs {
+		flex-grow: 1;
+		max-width: 100%;
+		background: #ffffff;
+	}
+	&__tab {
+		display: none;
+		border: 1px solid #dedede;
+		padding: 35px 47px 30px 40px;
+		&--active {
+			display: block;
+		}
+	}
+	&__tab-title {
+		font-weight: 700;
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+	&__tab-text {
+		color: #707070;
+		margin-bottom: 40px;
+	}
+	&__tab-subtitle {
+		font-weight: 700;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	&__tab-skill {
+	}
+	.skill {
+		margin-bottom: 18px;
+		&__info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 8px;
+		}
+		&__title {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 16px;
+		}
+		&__percent {
+			font-weight: 700;
+			font-size: 16px;
+		}
+		&__level {
+			height: 15px;
+			background: #f4f4f4;
+			border-radius: 4px;
+			span {
+				display: block;
+				height: 100%;
+				background: url('../images/skill-level-bg.jpg') left center repeat-x;
+				background-size: auto 100%;
+				border-radius: 4px;
+			}
+		}
+	}
+}
+
+.profile-online, .profile-offline {
+	display: none;
+	padding-left: 27px;
+	position: relative;
+	&::before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&:hover {
+		background: transparent;
+		color: #707070;
+	}
+}
+.profile-online::before {
+	background: $color-green;
+}
+.profile-offline::before {
+	background: $color-red;
+}
+.profile.online .profile-online {
+	display: block;
+}
+.profile.offline .profile-offline {
+	display: block;
+}

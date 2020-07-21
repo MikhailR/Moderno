@@ -100,5 +100,15 @@ $(function(){
     $(this).addClass('settings__trigger--active');
     $('#' + id).addClass('settings__tab--active').fadeIn(300);
   });
+
+  //переключение табов на странице профиля автора продуктов
+  $('.profile__trigger').on('click', function(e){
+    e.preventDefault();
+    var id = $(this).attr('data-tab');
+    $('.profile__trigger').removeClass('profile__trigger--active');
+    $('.profile__tab').removeClass('profile__tab--active');
+    $(this).addClass('profile__trigger--active');
+    $('#' + id).addClass('profile__tab--active').fadeIn(300);
+  });
   
 });

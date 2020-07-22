@@ -27,7 +27,7 @@
 }
 
 .products-page {
-	padding-bottom: 110px;
+	margin-bottom: 110px;
 	&__inner {
 		display: flex;
 	}
@@ -291,11 +291,11 @@
 	&__catalog {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		margin-bottom: 27px;
+		margin: 0 0 27px -30px;
 	}
 	&__catalog-item {
-		width: 31%;
+		width: calc(33.333% - 30px);
+		margin-left: 30px;
 		margin-bottom: 30px;
 		transition-duration: 0.3s;
 		&:hover {
@@ -331,11 +331,10 @@
 			padding: 15px 22px 18px;
 		}
 		&__author-photo {
+			flex-shrink: 0;
 			width: 30px;
 			height: 30px;
 		}
-	}
-	&__pagination {
 	}
 }
 

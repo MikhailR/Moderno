@@ -1,5 +1,5 @@
 .product {
-	padding-bottom: 94px;
+	margin-bottom: 94px;
 	&__inner {
 		display: flex;
 	}
@@ -205,6 +205,7 @@
 		margin-bottom: 28px;
 	}
 	&__more-image {
+		flex-shrink: 0;
 		width: 100px;
 		min-height: 90px;
 		background: #d5d5d5;

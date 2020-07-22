@@ -1,5 +1,9 @@
 .trend {
 	padding: 115px 0 120px;
+	&__wrapper {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
 	&__title {
 		margin-bottom: 45px;
 	}	
@@ -25,6 +29,8 @@
 	}
 	&__slide {
 		max-width: 440px;
+	}
+	.slick-slide {
 		margin-right: 35px;
 	}
 	.slick-list {
@@ -34,11 +40,12 @@
 	.slick-dots {
 		padding-top: 55px;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;	
 		li {
 			line-height: 0;
-			margin: 0 4px;
+			margin: 0 4px 10px;
 			&.slick-active button {
 				background: $color-green;
 				box-shadow: none;

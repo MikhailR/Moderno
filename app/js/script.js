@@ -35,7 +35,30 @@ $(function(){
   	slidesToShow: 4,
   	slidesToScroll: 4,
   	dots: true,
-  	arrows: false
+  	arrows: false,
+    responsive: [
+    {
+      breakpoint: 1401,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 1101,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
   });
 
   //range-шкала цен на странице каталога товаров
